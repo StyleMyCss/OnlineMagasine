@@ -1,0 +1,328 @@
+body {
+margin: 0;
+background:white;
+font-family: 'Work Sans', sans-serif;
+font-weight: 500;
+
+}
+/* styling samt hover effekt af headeren*/
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: rgb(250, 213, 121);
+}
+
+HEADER::after{
+    content: '';
+    display: table;
+    CLEAR: BOTH;
+}
+
+.logo {
+    float: left;
+    padding: 10px 0;
+}
+
+nav {
+    float: right;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav li{
+    display: inline-block; 
+    margin-left: 70px;
+    padding-top: 50px;
+
+    position:relative;
+
+}
+
+nav a {
+    color: rgb(14, 101, 231);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+nav a:hover {
+color: #000;
+}
+
+nav a::before {
+    content:'';
+    display:block;
+    height:5px;
+    width:100%;
+    background-color: #444;
+
+    position: absolute;
+    top:0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+/*starten af footeren*/
+footer {
+    position:fixed;
+    bottom: 0px;
+    width: 100%;
+    background:rgb(250, 213, 121);
+}
+
+.main-content {
+    display:flex;
+}
+
+.main-content, .box {
+    flex-basis: 50%;
+    padding: 1px 5px;
+}
+
+.box h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .content {
+    margin:20px 0 0 0;
+}
+.left .content .social {  
+    margin:20px 0 0 0; 
+}
+.left .content .social a {  
+    margin:0 2px; 
+}
+.left .content .social a span {  
+    height: 40px;
+    width: 40px; 
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+/* selve hoovereffekten på SoMe logoerne*/
+.left .content .social a span:hover {
+    background: #f12020
+}
+
+
+/* Dropdown knappen til flere menupunkter */
+.dropbtn {
+    background-color:rgb(14, 101, 231);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: inline;
+    display: inline-block;
+  }
+  
+  /* Selve dropdown Contentet */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Styling af linksne inde i dropdown-menuerne */
+  .dropdown-content a {
+    color: rgb(14, 101, 231);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Vis dropdownmenuen når man hover over*/
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: rgb(14, 101, 231);}
+
+  /* Dropdown koden er taget fra w3sschools https://www.w3schools.com/howto/howto_css_dropdown.asp */
+
+/*contentet på forsiden*/
+.container-1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+  .container-1 div {
+      border: 3px solid rgb(14, 101, 231);
+      padding:10px;
+      margin: 40px;
+      text-align: center;
+      width: 100%;
+  }
+
+  .box-1 {
+      flex:1;
+      background: rgb(250, 213, 121);
+  }
+  .box-2{
+      flex:1;
+      background: rgb(250, 213, 121);
+  }
+  .box-3{
+      flex:1;
+      background: rgb(250, 213, 121);
+  }
+
+  .Seneste{
+      text-align: center;
+      padding-top: 50px;  
+      color: rgb(14, 101, 231);
+  }
+
+  /*article 1*/
+
+  .wrapper {
+      display: flex;
+      text-align: center;
+  }
+
+  .wrapper>*{
+      padding:10px;
+      margin: 10px;
+      flex: 1 100%;
+      border-radius: 10px;
+  }
+  .main4 {
+      text-align: left;
+      background: rgb(14, 101, 231);
+      height: 300px;
+      font-size: 24px;
+      border: 2px solid black;
+      padding: 10px;
+  }
+  .aside1 {
+      background: rgb(14, 101, 231);
+      border: 2px solid black;
+  }
+  .aside2 {
+    background:rgb(250, 213, 121);
+    border: 2px solid black;
+}
+
+  @media all and (min-width: 800px){
+    .main4 {
+        flex: 20%;
+        
+    }
+      .aside2{
+          order: 2;
+        }
+        .main4{
+            order:3;
+            font-size: 40px;   
+        }
+  }
+
+  @media all and (min-width: 600px){
+      .aside1{
+          flex: 1;
+      }
+  }
+
+  .kryptovaluta{
+      padding: 10px;
+      align-items: center;
+      border: 2px solid black;
+  }
+/*article 1 slut*/
+
+/*article 2*/
+.flexbox-container5{
+    display: flex;
+    justify-content: space-between;
+}
+.flexbox-item {
+    width: 450px;
+    margin: 10px;
+    border: 3px solid rgb(14, 101, 231);
+    background-color: #dfdfdf;
+}
+
+.flexbox-item-5 {
+    min-height: 400px;
+}
+
+.flexbox-item-6 {
+    min-height: 200px;
+    padding: 10px;
+}
+
+.flexbox-item-7{
+    min-height: 300px;
+    font-size: 13px;
+    padding: 10px;
+}
+.overskrift_krypto{
+    font-size: 400%;
+    text-align: center;
+    color: rgb(14, 101, 231)
+}
+
+/*article 2 slut*/
+
+/*article 3*/
+
+@media (max-width: 800px) {
+    .flexbox-container-10 {
+      flex-direction: column;
+    }
+  }
+
+.flexbox-container-10{
+    display: flex;
+    justify-content: space-between;
+}
+.flexbox-item0{
+    width: 450px;
+    margin: 10px;
+    border: 3px solid rgb(14, 101, 231);
+    background-color:white;
+}
+
+.flexbox-item-11{
+    min-height: 400px;
+    padding: 10px;
+    order: 1;
+}
+.flexbox-item-12{
+    min-height: 400px;
+    padding: 10px;
+    order: 3;
+}
+.flexbox-item-13{
+    min-height: 400px;
+    order: 4;
+}
+.flexbox-item-14{
+    min-height: 400px;
+    order: 2;
+}
+/*article 3 slut*/
+
+
